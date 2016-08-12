@@ -1,0 +1,22 @@
+function test(){
+	//1、创建XMLHttpRequest对象
+	var xhr = new XMLHttpRequest();
+	
+	//3、做准备工作（向谁发送请求）
+	
+	xhr.open("get","http://……",true);
+	
+	//2、设置回调函数
+	xhr.onreadystatechange = function(){
+		if(xhr.readystate==4){//完成
+			//1)、接收服务器端响应；(用responseText)
+			var str = xhr.responseText;//
+			//2)、客户端进行处理（一般来说，显示的多一些）
+			……
+		}
+	}
+	
+	//4、发送
+	xhr.send();
+
+}
